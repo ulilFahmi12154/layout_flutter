@@ -33,12 +33,12 @@
 **Langkah 1:**
 - Buat Project Baru
 
-![build_layout](layout_flutter/images/01_01.png)
+![build_layout](images/01_01.png)
 
 **Langkah 2:**
 - Buka file lib/main.dart
 
-![build_layout](layout_flutter/images/01_02.png)
+![build_layout](images/01_02.png)
 
 **Langkah 3:**
 
@@ -67,4 +67,5 @@
 
 **Langkah 4:**
 - Implementasi title row
+![build_layout](images/01_04.png)
 
