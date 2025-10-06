@@ -49,6 +49,19 @@ class MyApp extends StatelessWidget {
       ],
     );
 
+    const String wisataText =
+      'Waduk Wonorejo adalah waduk di Desa Wonorejo, Kecamatan Pagerwojo, Kabupaten Tulungagung, Jawa Timur, yang berfungsi sebagai penyedia air bersih, irigasi, PLTA, dan objek wisata alam dengan area perbukitan, kolam renang, serta wahana seperti paddling dan ATV. Dibangun pada tahun 1994/1995, waduk ini memiliki kapasitas sekitar 122 juta meter kubik dan dikelola oleh Jasa Tirta 1.\n\n'
+      'Nama: Muhammad Ulil Fahmi Ma\'rifatulloh\n'
+      'NIM: 2341760194';
+
+    Widget textSection = Container(
+      padding: const EdgeInsets.all(32),
+      child: const Text(
+        wisataText,
+        softWrap: true,
+      ),
+    );
+
     return MaterialApp(
       title: "Flutter layout: Muhammad Ulil Fahmi Ma'rifatulloh 2341760194",
       home: Scaffold(
@@ -57,6 +70,7 @@ class MyApp extends StatelessWidget {
           children: [
             titleSection,
             buttonSection,
+            textSection
             // const Text('Hello, World!'),
           ],
         ),

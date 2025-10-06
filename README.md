@@ -82,4 +82,13 @@
 - Tambah button section ke body
 ![button_row](images/02_03.png)
 
+### Praktikum 3: Implementasi text section
+**Langkah 1:**
+- Buat widget textSection
+![text_section](images/03_01.png)
+
+**Langkah 2:**
+- Tambahkan variabel text section ke body
+![text_section](images/03_02.png)
+
 
