@@ -91,4 +91,17 @@
 - Tambahkan variabel text section ke body
 ![text_section](images/03_02.png)
 
+### Praktikum 4: Implementasi image section
+**Langkah 1:**
+- Siapkan aset gambar
+
+![image_section](images/04_01.png)
+
+**Langkah 2:**
+- Tambahkan gambar ke body
+![image_section](images/04_02.png)
+
+**Langkah 3:**
+- Terakhir, ubah menjadi ListView
+![image_section](images/04_03.png)
 

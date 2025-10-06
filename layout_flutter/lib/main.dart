@@ -20,12 +20,12 @@ class MyApp extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.only(bottom: 8),
                   child: const Text(
-                    'Wisata Gunung di Batu',
+                    'Wisata Alam di Tulungagung',
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ),
                 Text(
-                  'Batu, Malang, Indonesia',
+                  'Tulungagung, Jawa Timur, Indonesia',
                   style: TextStyle(color: Colors.grey[500]),
                 ),
               ],
@@ -68,6 +68,12 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(title: const Text('Flutter layout demo')),
         body: Column(
           children: [
+            Image.asset(  
+              'images/bendungan_wonorejo.jpg',
+              width: 600,
+              height: 240,
+              fit: BoxFit.cover,
+            ),
             titleSection,
             buttonSection,
             textSection
