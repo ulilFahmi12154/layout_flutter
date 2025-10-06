@@ -59,6 +59,10 @@ flutter:
   assets:
     - images/salt.png
     - images/sugar.png
+    - images/oil.png
+    - images/flour.png
+    - images/rice.png
+    - images/soy-sauce.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:
