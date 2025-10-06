@@ -129,7 +129,8 @@
 ![build_navigation](images/05_05.png)
 
 **Langkah 6:**
-- Lengkapi kode di class HomePage
+- Membuat ListView dan itemBuilder
+![build_navigation](images/05_06.png)
 
 **Langkah 7:**
 - Menambahkan aksi pada ListView
