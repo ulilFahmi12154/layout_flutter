@@ -1,16 +1,46 @@
-# layout_flutter
+# 📱 Laporan Praktikum Pemrograman Mobile  
+## Pertemuan: Layout dan Navigasi
 
-A new Flutter project.
+---
 
-## Getting Started
+## 👤 Identitas
+- **Nama** : Muhammad Ulil Fahmi Ma'rifatulloh  
+- **NIM** : 2341760194
+- **Kelas** : SIB 3F 
+- **Mata Kuliah** : Pemrograman Mobile  
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## 📖 Tujuan Praktikum
+1. Menerapkan jenis-jenis layout.
+2. Menerapkan navigasi.
+3. Menerapkan routing.   
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🛠️ Alat dan Bahan
+- **Hardware** : Laptop/PC dengan RAM minimal 8GB  
+- **Software** :
+  - Flutter SDK  
+  - Android Studio / VS Code  
+  - Emulator Android / Device Fisik  
+- **Bahasa Pemrograman** : Dart  
+
+---
+
+## 📂 Langkah Praktikum
+### Praktikum 1: Membangun Layout di Flutter
+**Langkah 1:**
+- Buat Project Baru
+
+![build_layout](images/01_01.png)
+
+**Langkah 2:**
+- Buka file lib/main.dart
+
+**Langkah 3:**
+- Identifikasi layout diagram
+
+**Langkah 4:**
+- Implementasi title row
+
