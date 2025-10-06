@@ -122,6 +122,8 @@
 **Langkah 4:**
 - Membuat data model
 
+![build_navigation](images/05_04.png)
+
 **Langkah 5:**
 - Lengkapi kode di class HomePage
 
