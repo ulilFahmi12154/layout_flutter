@@ -69,3 +69,17 @@
 - Implementasi title row
 ![build_layout](images/01_04.png)
 
+### Praktikum 2: Implementasi button row
+**Langkah 1:**
+- Buat method Column _buildButtonColumn
+![button_row](images/02_01.png)
+
+**Langkah 2:**
+- Buat widget buttonSection
+![button_row](images/02_02.png)
+
+**Langkah 3:**
+- Tambah button section ke body
+![button_row](images/02_03.png)
+
+
