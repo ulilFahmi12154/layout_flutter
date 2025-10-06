@@ -147,6 +147,8 @@
 
 (https://docs.flutter.dev/cookbook/navigation/navigate-with-arguments)
 
+![itempage](images/tp_02_02.gif)
+
 **Nomor 3**
 - Pada hasil akhir dari aplikasi belanja yang telah anda selesaikan, tambahkan atribut foto produk, stok, dan rating. Ubahlah tampilan menjadi GridView seperti di aplikasi marketplace pada umumnya.
 
