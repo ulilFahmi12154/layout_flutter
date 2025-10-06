@@ -117,6 +117,7 @@
 
 **Langkah 3:**
 - Lengkapi Kode di main.dart
+![build_navigation](images/05_03.png)
 
 **Langkah 4:**
 - Membuat data model
