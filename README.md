@@ -170,6 +170,8 @@ Modifikasi home_page dan item_page
 
 https://docs.flutter.dev/cookbook/navigation/hero-animations
 
+![hero_widget](images/tp_02_03_04.gif)
+
 **Nomor 5**
 - Sesuaikan dan modifikasi tampilan sehingga menjadi aplikasi yang menarik. Selain itu, pecah widget menjadi kode yang lebih kecil. Tambahkan Nama dan NIM di footer aplikasi belanja Anda.
 

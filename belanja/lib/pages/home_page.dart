@@ -3,7 +3,7 @@ import 'package:belanja/models/item.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
-  
+
   final List<Item> items = [
     Item(
       name: 'Sugar',
@@ -26,7 +26,10 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Shopping List', style: TextStyle(color: Colors.white)),
+        title: const Text(
+          'Shopping List',
+          style: TextStyle(color: Colors.white),
+        ),
         backgroundColor: Colors.blue,
       ),
       body: Container(
@@ -54,10 +57,13 @@ class HomePage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Expanded(
-                        child: Image.asset(
-                          item.image,
-                          fit: BoxFit.cover,
-                          width: double.infinity,
+                        child: Hero(
+                          tag: item.image,
+                          child: Image.asset(
+                            item.image,
+                            fit: BoxFit.cover,
+                            width: double.infinity,
+                          ),
                         ),
                       ),
                       const SizedBox(height: 8),

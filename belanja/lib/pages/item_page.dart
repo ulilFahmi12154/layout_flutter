@@ -19,11 +19,14 @@ class ItemPage extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Image.asset(
-                itemArgs.image,
-                width: 150,
-                height: 150,
-                fit: BoxFit.cover,
+              Hero(
+                tag: itemArgs.image,
+                child: Image.asset(
+                  itemArgs.image,
+                  width: 150,
+                  height: 150,
+                  fit: BoxFit.cover,
+                ),
               ),
               const SizedBox(height: 16),
               Text(
