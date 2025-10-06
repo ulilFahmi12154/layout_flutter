@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:belanja/models/item.dart';
 import 'package:belanja/widgets/product_card.dart';
 import 'package:belanja/widgets/app_footer.dart';
@@ -51,6 +52,21 @@ class HomePage extends StatelessWidget {
     ),
   ];
 
+  void _onProductTap(BuildContext context, Item item) {
+    // Menggunakan GoRouter untuk navigasi
+    context.pushNamed('item', extra: item);
+    
+    // Atau bisa juga menggunakan:
+    // context.push('/item', extra: item);
+  }
+
+  void _onSearchTap(BuildContext context) {
+    showSearch(
+      context: context,
+      delegate: ProductSearchDelegate(items: items),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,11 +86,19 @@ class HomePage extends StatelessWidget {
         actions: [
           IconButton(
             icon: const Icon(Icons.search, color: Colors.white),
-            onPressed: () {},
+            onPressed: () => _onSearchTap(context),
           ),
           IconButton(
             icon: const Icon(Icons.shopping_cart, color: Colors.white),
-            onPressed: () {},
+            onPressed: () {
+              // Bisa ditambahkan navigasi ke cart page nanti
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text('Fitur keranjang akan segera hadir!'),
+                  duration: Duration(seconds: 2),
+                ),
+              );
+            },
           ),
         ],
       ),
@@ -117,9 +141,7 @@ class HomePage extends StatelessWidget {
                   final item = items[index];
                   return ProductCard(
                     item: item,
-                    onTap: () {
-                      Navigator.pushNamed(context, '/item', arguments: item);
-                    },
+                    onTap: () => _onProductTap(context, item),
                   );
                 },
               ),
@@ -133,10 +155,85 @@ class HomePage extends StatelessWidget {
       
       // Floating Action Button
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          context.pushNamed('home'); // Navigasi ke home (refresh)
+        },
         backgroundColor: Colors.deepPurple,
-        child: const Icon(Icons.add_shopping_cart, color: Colors.white),
+        child: const Icon(Icons.home, color: Colors.white),
       ),
+    );
+  }
+}
+
+// Search Delegate untuk fitur pencarian
+class ProductSearchDelegate extends SearchDelegate {
+  final List<Item> items;
+
+  ProductSearchDelegate({required this.items});
+
+  @override
+  List<Widget> buildActions(BuildContext context) {
+    return [
+      IconButton(
+        icon: const Icon(Icons.clear),
+        onPressed: () {
+          query = '';
+        },
+      ),
+    ];
+  }
+
+  @override
+  Widget buildLeading(BuildContext context) {
+    return IconButton(
+      icon: const Icon(Icons.arrow_back),
+      onPressed: () {
+        close(context, null);
+      },
+    );
+  }
+
+  @override
+  Widget buildResults(BuildContext context) {
+    final results = items.where((item) => 
+      item.name.toLowerCase().contains(query.toLowerCase())
+    ).toList();
+
+    return _buildSearchResults(results, context);
+  }
+
+  @override
+  Widget buildSuggestions(BuildContext context) {
+    final suggestions = items.where((item) => 
+      item.name.toLowerCase().contains(query.toLowerCase())
+    ).toList();
+
+    return _buildSearchResults(suggestions, context);
+  }
+
+  Widget _buildSearchResults(List<Item> results, BuildContext context) {
+    return ListView.builder(
+      itemCount: results.length,
+      itemBuilder: (context, index) {
+        final item = results[index];
+        return ListTile(
+          leading: Hero(
+            tag: item.image,
+            child: Image.asset(
+              item.image,
+              width: 50,
+              height: 50,
+              fit: BoxFit.cover,
+            ),
+          ),
+          title: Text(item.name),
+          subtitle: Text('Rp ${item.price}'),
+          trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+          onTap: () {
+            context.pushNamed('item', extra: item);
+          },
+        );
+      },
     );
   }
 }

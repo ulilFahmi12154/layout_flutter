@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:belanja/models/item.dart';
 
 class ItemPage extends StatelessWidget {
-  const ItemPage({super.key});
+  final Item item;
+
+  const ItemPage({super.key, required this.item});
 
   @override
   Widget build(BuildContext context) {
-    final itemArgs = ModalRoute.of(context)!.settings.arguments as Item;
-
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -16,6 +17,10 @@ class ItemPage extends StatelessWidget {
         ),
         backgroundColor: Colors.deepPurple,
         elevation: 0,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () => context.pop(), // GoRouter back navigation
+        ),
         actions: [
           IconButton(
             icon: const Icon(Icons.share, color: Colors.white),
@@ -36,14 +41,14 @@ class ItemPage extends StatelessWidget {
                 children: [
                   // Product Image with Hero
                   Hero(
-                    tag: itemArgs.image,
+                    tag: item.image,
                     child: Container(
                       height: 250,
                       width: double.infinity,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(16),
                         image: DecorationImage(
-                          image: AssetImage(itemArgs.image),
+                          image: AssetImage(item.image),
                           fit: BoxFit.cover,
                         ),
                         boxShadow: [
@@ -60,7 +65,7 @@ class ItemPage extends StatelessWidget {
                   
                   // Product Name
                   Text(
-                    itemArgs.name,
+                    item.name,
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 24,
@@ -72,7 +77,7 @@ class ItemPage extends StatelessWidget {
                   
                   // Price
                   Text(
-                    'Rp ${itemArgs.price.toString()}',
+                    'Rp ${item.price.toString()}',
                     style: const TextStyle(
                       fontSize: 28,
                       fontWeight: FontWeight.bold,
@@ -88,13 +93,13 @@ class ItemPage extends StatelessWidget {
                       _buildInfoChip(
                         icon: Icons.star,
                         color: Colors.amber,
-                        text: itemArgs.rating.toString(),
+                        text: item.rating.toString(),
                       ),
                       const SizedBox(width: 16),
                       _buildInfoChip(
                         icon: Icons.inventory_2,
-                        color: itemArgs.stock > 5 ? Colors.green : Colors.orange,
-                        text: 'Stok: ${itemArgs.stock}',
+                        color: item.stock > 5 ? Colors.green : Colors.orange,
+                        text: 'Stok: ${item.stock}',
                       ),
                     ],
                   ),
@@ -105,7 +110,7 @@ class ItemPage extends StatelessWidget {
                   const SizedBox(height: 24),
                   
                   // Product Details
-                  _buildDetailsSection(itemArgs),
+                  _buildDetailsSection(item),
                 ],
               ),
             ),

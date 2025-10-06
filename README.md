@@ -179,4 +179,5 @@ https://docs.flutter.dev/cookbook/navigation/hero-animations
 **Nomor 6**
 - Selesaikan Praktikum 5: Navigasi dan Rute tersebut. Cobalah modifikasi menggunakan plugin go_router, lalu dokumentasikan dan push ke repository Anda berupa screenshot setiap hasil pekerjaan beserta penjelasannya di file README.md. Kumpulkan link commit repository GitHub Anda kepada dosen yang telah disepakati!
 
+![plugin_go_router](images/tp_02_03_06.gif)
 
