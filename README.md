@@ -126,6 +126,7 @@
 
 **Langkah 5:**
 - Lengkapi kode di class HomePage
+![build_navigation](images/05_05.png)
 
 **Langkah 6:**
 - Lengkapi kode di class HomePage
