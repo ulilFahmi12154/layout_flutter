@@ -109,8 +109,11 @@
 **Langkah 1:**
 - Siapkan project baru
 
+![build_navigation](images/05_01.png)
+
 **Langkah 2:**
 - Mendefinisikan Route
+![build_navigation](images/05_02.png)
 
 **Langkah 3:**
 - Lengkapi Kode di main.dart
