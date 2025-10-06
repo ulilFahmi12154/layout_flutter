@@ -103,5 +103,5 @@
 
 **Langkah 3:**
 - Terakhir, ubah menjadi ListView
-![image_section](images/04_03.png)
+![image_section](images/04_03.gif)
 
