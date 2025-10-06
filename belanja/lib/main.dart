@@ -4,7 +4,7 @@ import 'package:belanja/pages/item_page.dart';
 
 void main() {
   runApp(MaterialApp(
-    initialRoute: '/',
+    initialRoute: '/',  
     routes: {
       '/': (context) => HomePage(),
       '/item': (context) => const ItemPage(),

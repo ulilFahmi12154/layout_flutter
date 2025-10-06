@@ -6,26 +6,50 @@ class ItemPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-     final itemArgs = ModalRoute.of(context)!.settings.arguments as Item;
-    
+    final itemArgs = ModalRoute.of(context)!.settings.arguments as Item;
+
     return Scaffold(
       appBar: AppBar(
-        title: Text('Item Detail', style: TextStyle(color: Colors.white)),
+        title: const Text('Item Detail', style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.blue,
       ),
       body: Center(
         child: Container(
-          padding: EdgeInsets.all(16),
+          padding: const EdgeInsets.all(16),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
             children: [
+              Image.asset(
+                itemArgs.image,
+                width: 150,
+                height: 150,
+                fit: BoxFit.cover,
+              ),
+              const SizedBox(height: 16),
+              Text(
+                itemArgs.name,
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 22,
+                ),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                'Rp ${itemArgs.price}',
+                style: const TextStyle(fontSize: 18, color: Colors.green),
+              ),
+              const SizedBox(height: 8),
+              Text('Stok: ${itemArgs.stock}'),
+              const SizedBox(height: 8),
               Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(itemArgs.name),
-                SizedBox(width: 4), // menambahkan spasi antara nama dan harga
-                Text('Price ${itemArgs.price}'),
-              ],
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Icon(Icons.star, color: Colors.amber, size: 20),
+                  Text(
+                    itemArgs.rating.toString(),
+                    style: const TextStyle(fontSize: 16),
+                  ),
+                ],
               ),
             ],
           ),

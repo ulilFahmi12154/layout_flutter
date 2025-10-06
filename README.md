@@ -152,6 +152,19 @@
 **Nomor 3**
 - Pada hasil akhir dari aplikasi belanja yang telah anda selesaikan, tambahkan atribut foto produk, stok, dan rating. Ubahlah tampilan menjadi GridView seperti di aplikasi marketplace pada umumnya.
 
+Menambahkan variabel harga, gambar, dan rating
+
+![grid_view](images/tp_02_03_01.png)
+
+Menambahkan assets 
+
+![grid_view](images/tp_02_03_02.png)
+
+Modifikasi home_page dan item_page
+
+![grid_view](images/tp_02_03_03.gif)
+
+
 **Nomor 4**
 - Silakan implementasikan Hero widget pada aplikasi belanja Anda dengan mempelajari dari sumber ini:
 
