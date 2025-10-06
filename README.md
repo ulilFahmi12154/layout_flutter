@@ -134,6 +134,7 @@
 
 **Langkah 7:**
 - Menambahkan aksi pada ListView
+![build_navigation](images/05_07.png)
 
 
 
